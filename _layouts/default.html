@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title }}</title> <!-- 페이지 제목이 없을 경우 site.title을 대신 사용 -->
+  <link rel="stylesheet" href="{{ "/assets/styles.css" | relative_url }}"> <!-- CSS 파일 경로 확인 -->
+</head>
+<body>
+  <header>
+    <h1><a href="{{ site.url | append: site.baseurl }}">Tae Yeon's Blog</a></h1>
+    <nav>
+      <ul>
+        <li><a href="{{ "/" | relative_url }}">Home</a></li>
+        <li><a href="{{ "/blog" | relative_url }}">Blog</a></li>
+        <li><a href="{{ "/about" | relative_url }}">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <article>
+      {{ content }}
+    </article>
+  </main>
+  
+  <footer>
+    <p>&copy; {{ site.time | date: "%Y" }} Tae Yeon</p>
+  </footer>
+</body>
+</html>
