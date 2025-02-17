@@ -1,3 +1,10 @@
 title: "Tae Yeon's Blog"
 description: "개발 공부 기록을 공유하는 블로그"
 theme: jekyll-theme-cayman
+
+# 네비게이션 메뉴
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "Blog"
+    url: "/blog"
